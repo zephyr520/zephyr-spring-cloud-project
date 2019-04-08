@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.zephyr.ZephyrEurekaServerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.435 sec - in com.zephyr.ZephyrEurekaServerApplicationTests
