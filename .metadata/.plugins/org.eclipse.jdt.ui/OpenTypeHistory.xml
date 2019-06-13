@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=zephyr-service-common/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1504167089332"/>
+<typeInfo handle="=zephyr-service-gateway/D:\/repository\/com\/netflix\/zuul\/zuul-core\/1.3.1\/zuul-core-1.3.1.jar&lt;com.netflix.zuul(ZuulFilter.class[ZuulFilter" modifiers="1057" timestamp="1545378149689"/>
+<typeInfo handle="=zephyr-service-gateway/src\/main\/java&lt;com.zephyr.gateway.filter{AbstractFilter.java[AbstractFilter" modifiers="1025" timestamp="1554801918741"/>
+</typeInfoHistroy>

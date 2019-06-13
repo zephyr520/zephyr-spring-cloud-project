@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zephyr.user.dao.TAdminOrganizationMapper" >
+  <resultMap id="BaseResultMap" type="com.zephyr.user.domain.TAdminOrganization" >
+    <id column="org_code" property="orgCode" jdbcType="VARCHAR" />
+    <result column="org_parent_code" property="orgParentCode" jdbcType="VARCHAR" />
+    <result column="org_name" property="orgName" jdbcType="VARCHAR" />
+    <result column="org_type" property="orgType" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    org_code, org_parent_code, org_name, org_type, user_id, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_admin_organization
+    where org_code = #{orgCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_admin_organization
+    where org_code = #{orgCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.zephyr.user.domain.TAdminOrganization" >
+    insert into t_admin_organization (org_code, org_parent_code, org_name, 
+      org_type, user_id, status
+      )
+    values (#{orgCode,jdbcType=VARCHAR}, #{orgParentCode,jdbcType=VARCHAR}, #{orgName,jdbcType=VARCHAR}, 
+      #{orgType,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zephyr.user.domain.TAdminOrganization" >
+    insert into t_admin_organization
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgCode != null" >
+        org_code,
+      </if>
+      <if test="orgParentCode != null" >
+        org_parent_code,
+      </if>
+      <if test="orgName != null" >
+        org_name,
+      </if>
+      <if test="orgType != null" >
+        org_type,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgCode != null" >
+        #{orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="orgParentCode != null" >
+        #{orgParentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="orgName != null" >
+        #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zephyr.user.domain.TAdminOrganization" >
+    update t_admin_organization
+    <set >
+      <if test="orgParentCode != null" >
+        org_parent_code = #{orgParentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="orgName != null" >
+        org_name = #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        org_type = #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where org_code = #{orgCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zephyr.user.domain.TAdminOrganization" >
+    update t_admin_organization
+    set org_parent_code = #{orgParentCode,jdbcType=VARCHAR},
+      org_name = #{orgName,jdbcType=VARCHAR},
+      org_type = #{orgType,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      status = #{status,jdbcType=TINYINT}
+    where org_code = #{orgCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

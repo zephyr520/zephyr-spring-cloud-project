@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.zephye.gateway.remote&apos; to &apos;com.zephyr.gateway.remote&apos;&#x0D;&#x0A;- Original project: &apos;zephyr-service-gateway&apos;&#x0D;&#x0A;- Original element: &apos;zephyr-service-gateway/src/main/java/com.zephye.gateway.remote&apos;&#x0D;&#x0A;- Renamed element: &apos;zephyr-service-gateway/src/main/java/com.zephyr.gateway.remote&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.zephye.gateway.remote&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.zephye.gateway.remote" name="com.zephyr.gateway.remote" qualified="false" references="true" stamp="1554801793168" textual="false" version="1.0"/>
+</session>
